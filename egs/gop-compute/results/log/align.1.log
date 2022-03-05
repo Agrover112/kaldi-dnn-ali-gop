@@ -1,0 +1,9 @@
+# linear-to-nbest ark,t:./results/align.1 "ark:utils/sym2int.pl --map-oov 3 -f 2- data/lang/words.txt ./data//split1/1/text|" "" "" ark:- | lattice-align-words data/lang/phones/word_boundary.int ./results/final.mdl ark:- ark,t:./results/aligned.1 
+# Started at Sat Mar  5 16:40:52 IST 2022
+#
+linear-to-nbest ark,t:./results/align.1 'ark:utils/sym2int.pl --map-oov 3 -f 2- data/lang/words.txt ./data//split1/1/text|' '' '' ark:- 
+lattice-align-words data/lang/phones/word_boundary.int ./results/final.mdl ark:- ark,t:./results/aligned.1 
+LOG (linear-to-nbest[5.5.1010~1-b88c]:main():linear-to-nbest.cc:130) Done 6 n-best entries ,0 had errors.
+LOG (lattice-align-words[5.5.1010~1-b88c]:main():lattice-align-words.cc:126) Successfully aligned 6 lattices; 0 had errors.
+# Accounting: time=1 threads=1
+# Ended (code 0) at Sat Mar  5 16:40:53 IST 2022, elapsed time 1 seconds
