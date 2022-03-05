@@ -1,0 +1,2 @@
+compute-cmvn-stats --spk2utt=ark:./data/spk2utt scp:./data/feats.scp ark,scp:/home/meow/kaldi-ali/egs/kaldi-dnn-ali-gop/egs/gop-compute/./data/mfcc/cmvn_data.ark,/home/meow/kaldi-ali/egs/kaldi-dnn-ali-gop/egs/gop-compute/./data/mfcc/cmvn_data.scp 
+LOG (compute-cmvn-stats[5.5.1010~1-b88c]:main():compute-cmvn-stats.cc:171) Done accumulating CMVN stats for 6 utterances; 0 had errors.

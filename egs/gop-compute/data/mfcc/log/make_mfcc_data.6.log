@@ -1,0 +1,10 @@
+# compute-mfcc-feats --write-utt2dur=ark,t:./data/mfcc/log/utt2dur.6 --verbose=2 --config=conf/mfcc.conf scp,p:./data/mfcc/log/wav_data.6.scp ark:- | copy-feats --write-num-frames=ark,t:./data/mfcc/log/utt2num_frames.6 --compress=true ark:- ark,scp:/home/meow/kaldi-ali/egs/kaldi-dnn-ali-gop/egs/gop-compute/./data/mfcc/raw_mfcc_data.6.ark,/home/meow/kaldi-ali/egs/kaldi-dnn-ali-gop/egs/gop-compute/./data/mfcc/raw_mfcc_data.6.scp 
+# Started at Sat Mar  5 13:52:30 IST 2022
+#
+copy-feats --write-num-frames=ark,t:./data/mfcc/log/utt2num_frames.6 --compress=true ark:- ark,scp:/home/meow/kaldi-ali/egs/kaldi-dnn-ali-gop/egs/gop-compute/./data/mfcc/raw_mfcc_data.6.ark,/home/meow/kaldi-ali/egs/kaldi-dnn-ali-gop/egs/gop-compute/./data/mfcc/raw_mfcc_data.6.scp 
+compute-mfcc-feats --write-utt2dur=ark,t:./data/mfcc/log/utt2dur.6 --verbose=2 --config=conf/mfcc.conf scp,p:./data/mfcc/log/wav_data.6.scp ark:- 
+VLOG[2] (compute-mfcc-feats[5.5.1010~1-b88c]:main():compute-mfcc-feats.cc:182) Processed features for key 1241-0005
+LOG (compute-mfcc-feats[5.5.1010~1-b88c]:main():compute-mfcc-feats.cc:185)  Done 1 out of 1 utterances.
+LOG (copy-feats[5.5.1010~1-b88c]:main():copy-feats.cc:143) Copied 1 feature matrices.
+# Accounting: time=0 threads=1
+# Ended (code 0) at Sat Mar  5 13:52:30 IST 2022, elapsed time 0 seconds
