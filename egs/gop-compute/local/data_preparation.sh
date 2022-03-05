@@ -1,5 +1,4 @@
-#!/bin/sh
-
+#!/usr/bin/bash
 # Copyright 2016-2017  Author: Ming Tu
 
 # Begin configuration section.
@@ -13,7 +12,7 @@ dnn=false
 echo "$0 $@"  # Print the command line for logging
 
 [ -f path.sh ] && . ./path.sh # source the path.
-#. parse_options.sh || exit 1;
+. parse_options.sh || exit 1;
 
 if [ $# != 2 ]; then
    echo "usage: local/data_preparation.sh <audio-dir> <data-dir>"
