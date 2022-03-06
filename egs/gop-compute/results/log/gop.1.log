@@ -1,0 +1,17 @@
+# compute-gmm-gop ./results/tree ./results/final.mdl data/lang/L.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:./data//split1/1/utt2spk scp:./data//split1/1/cmvn.scp scp:./data//split1/1/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark:utils/sym2int.pl --map-oov 3 -f 2- data/lang/words.txt ./data//split1/1/text|" ark,t:./results/gop.1 ark,t:./results/align.1 ark,t:./results/phoneme_ll.1 
+# Started at Sat Mar  5 16:40:50 IST 2022
+#
+compute-gmm-gop ./results/tree ./results/final.mdl data/lang/L.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:./data//split1/1/utt2spk scp:./data//split1/1/cmvn.scp scp:./data//split1/1/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark:utils/sym2int.pl --map-oov 3 -f 2- data/lang/words.txt ./data//split1/1/text|' ark,t:./results/gop.1 ark,t:./results/align.1 ark,t:./results/phoneme_ll.1 
+add-deltas ark:- ark:- 
+apply-cmvn --utt2spk=ark:./data//split1/1/utt2spk scp:./data//split1/1/cmvn.scp scp:./data//split1/1/feats.scp ark:- 
+WARNING (compute-gmm-gop[5.5.1010~1-b88c]:Decode():gmm-gop.cc:67) Did not successfully decode.
+WARNING (compute-gmm-gop[5.5.1010~1-b88c]:Decode():gmm-gop.cc:67) Did not successfully decode.
+WARNING (compute-gmm-gop[5.5.1010~1-b88c]:Decode():gmm-gop.cc:67) Did not successfully decode.
+WARNING (compute-gmm-gop[5.5.1010~1-b88c]:Decode():gmm-gop.cc:67) Did not successfully decode.
+WARNING (compute-gmm-gop[5.5.1010~1-b88c]:Decode():gmm-gop.cc:67) Did not successfully decode.
+LOG (apply-cmvn[5.5.1010~1-b88c]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 6 utterances, errors on 0
+WARNING (compute-gmm-gop[5.5.1010~1-b88c]:Decode():gmm-gop.cc:67) Did not successfully decode.
+WARNING (compute-gmm-gop[5.5.1010~1-b88c]:Decode():gmm-gop.cc:67) Did not successfully decode.
+LOG (compute-gmm-gop[5.5.1010~1-b88c]:main():compute-gmm-gop.cc:87) Done.
+# Accounting: time=2 threads=1
+# Ended (code 0) at Sat Mar  5 16:40:52 IST 2022, elapsed time 2 seconds

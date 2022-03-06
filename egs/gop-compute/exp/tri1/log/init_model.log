@@ -1,0 +1,8 @@
+# gmm-init-model --write-occs=exp/tri1/1.occs exp/tri1/tree exp/tri1/treeacc data/lang_nosp/topo exp/tri1/1.mdl 
+# Started at Sat Feb 19 10:33:25 IST 2022
+#
+gmm-init-model --write-occs=exp/tri1/1.occs exp/tri1/tree exp/tri1/treeacc data/lang_nosp/topo exp/tri1/1.mdl 
+LOG (gmm-init-model[5.5.997~2-054af]:main():gmm-init-model.cc:271) Number of separate statistics is 133230
+LOG (gmm-init-model[5.5.997~2-054af]:main():gmm-init-model.cc:306) Wrote model.
+# Accounting: time=0 threads=1
+# Ended (code 0) at Sat Feb 19 10:33:25 IST 2022, elapsed time 0 seconds

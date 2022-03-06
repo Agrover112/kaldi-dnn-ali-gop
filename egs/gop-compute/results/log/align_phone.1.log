@@ -1,0 +1,9 @@
+# lattice-to-phone-lattice ./results/final.mdl ark,t:./results/aligned.1 ark:- | nbest-to-ctm ark:- ./results/phone.1.ctm 
+# Started at Sat Mar  5 16:40:53 IST 2022
+#
+nbest-to-ctm ark:- ./results/phone.1.ctm 
+lattice-to-phone-lattice ./results/final.mdl ark,t:./results/aligned.1 ark:- 
+LOG (lattice-to-phone-lattice[5.5.1010~1-b88c]:main():lattice-to-phone-lattice.cc:94) Done converting 6 lattices.
+LOG (nbest-to-ctm[5.5.1010~1-b88c]:main():nbest-to-ctm.cc:119) Converted 6 linear lattices to ctm format; 0 had errors.
+# Accounting: time=0 threads=1
+# Ended (code 0) at Sat Mar  5 16:40:53 IST 2022, elapsed time 0 seconds
