@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/bash
 
 # Copyright 2016-2017  Author: Junbo Zhang
 #                              Ming Tu
@@ -74,7 +74,15 @@ esac
 echo "$0: computing GOP in $data using model from $srcdir, putting results in $dir"
 
 mdl=$srcdir/final.mdl
-tra="ark:utils/sym2int.pl --map-oov $oov -f 2- $lang/words.txt $sdata/JOB/text|";
+tra="ark:utils/sym2int.pl --map-oov $oov -f 2- $lang/words.txt $sdata/JOB/text|";  #Transcription archive created here using sym2int
+
+# INPUTS: $dir/tree $dir/final.mdl $lang/L.fst "$feats" "$tra"
+#feats : lda or delta features
+#tra : transcription archive 
+#L.fst : Lexicon fst
+#OUPUTS:
+#gop.JOB and align.JOB  phoneme_ll.JOB are  written out as files
+ 
 $cmd JOB=1:$nj $dir/log/gop.JOB.log \
   compute-gmm-gop $dir/tree $dir/final.mdl $lang/L.fst "$feats" "$tra" "ark,t:$dir/gop.JOB" "ark,t:$dir/align.JOB" "ark,t:$dir/phoneme_ll.JOB" || exit 1;
 
